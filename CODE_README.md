@@ -243,4 +243,26 @@ Online shopping
 </body>
 </html>
 
+<?PHP
+        $Name = $_POST["Name"];
+        $Phone = $_POST["Phone"];
+        $Age = $_POST["Age"];
+        $Address = $_POST["Address"];
+        $Mail = $_POST["Mail"];
+        $Cat = $_POST["Category"];
+        $Quantity = $_POST["Quantity"];
+        $Payment = $_POST["Payment"];
+        $q&r = $_POST["q&r"];
+        $information = array($Name,$Phone,$Age,$Address,$Mail,$Cat,$Quantity, $Payment,$q&r);
+        $to = "venkatanand2002@gmail.com";
+        $subject : "Customer Information";
+        $v = mail($to,$subject,$information,$Mail);
+        if($v == true)
+        {
+            echo "Please check your email for further information";
+        }
+        else{
+            echo "There is fault in sending the mail. Please try again later.";
+        }
+    ?>
 
